@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import AddUser from "./components/User/AddUser";
-import UsersList from "./components/User/UsersList";
+import AddUser from "./components/Users/AddUser";
+import UsersList from "./components/Users/UsersList";
 
 const DUMMY_USERS = [
-  { id: 1, username: "Antho", age: 28 },
-  { id: 2, username: "Cha", age: 30 },
+  { id: 1, username: "Antho", age: "28" },
+  { id: 2, username: "Cha", age: "30" },
 ];
+
 function App() {
   const [realList, setRealList] = useState(DUMMY_USERS);
 
@@ -18,7 +19,7 @@ function App() {
   return (
     <div>
       <AddUser onAddUser={testHandler} />
-      <UsersList items={realList} />
+      <UsersList users={realList} />
     </div>
   );
 }

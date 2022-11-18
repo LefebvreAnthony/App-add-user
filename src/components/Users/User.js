@@ -1,11 +1,12 @@
 import Card from "../UI/Card";
 
-const UserItem = (props) => {
+const UserItem = ({ username, age }) => {
   return (
     <Card>
       <li>
-        <p>Username : {props.username}</p>
-        <p>Age : {props.age}</p>
+        <p>
+          {username} ({age} years old)
+        </p>
       </li>
     </Card>
   );
